@@ -8,13 +8,14 @@ using namespace std;
 namespace coup{
     class Game{
 
-        vector<string> players_name;
+        vector<string> players_list;
 
         public:
             Game();
             string turn();
             vector<string> players();
             string winner();
+            void add_player(string);
 
     };
 }

@@ -10,11 +10,13 @@ class Player{
 
     int money = 0;
     Game game;
-    string name;
+
+    protected:
+        string name;
 
     public:
 
-        Player(Game,string);
+        Player(Game&,string);
         void income();
         void foreign_aid();
         void coup(Player);

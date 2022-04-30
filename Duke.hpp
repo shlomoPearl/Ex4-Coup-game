@@ -10,12 +10,8 @@ namespace coup{
         string card = "Duke";
         public:
             Duke(Game,string);
-            // void income();
-            // void foreign_aid();
-            // void coup();
             string role();
             void block(Player);
             void tax();
-            // string coins();
     };
 }

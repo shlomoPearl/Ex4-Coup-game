@@ -9,7 +9,8 @@
 using namespace std;
 
 namespace coup{
-    Duke::Duke(Game game, string name) : Player(game, name){}
+    Duke::Duke(Game game, string name) : Player(game, name){} 
+    
     string Duke::role(){
         return this-> card;
     }

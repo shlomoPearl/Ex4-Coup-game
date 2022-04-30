@@ -38,4 +38,11 @@ TEST_CASE("income&foreign_aid"){
         duke1.foreign_aid();
     }
 }
-TEST_CASE()
+TEST_CASE("not his turn - exception"){
+    string current_turn = g1.turn();
+    for (uint i = 0; i < players.size(); i++) {
+        if(players.at(i).role() != current_turn){
+            CHECK_THROWS(players.at(i).income());
+        }
+    }    
+}
