@@ -5,15 +5,15 @@
 #include <stdexcept>
 #include "Contessa.hpp"
 
-#define TAX 3
+const int TAX = 3;
 using namespace std;
 
 namespace coup{
-    Contessa::Contessa(Game game, string name) : Player(game, name){}
+    Contessa::Contessa(Game& game,const string& name) : Player(game, name){}
     string Contessa::role(){
         return this-> card;
     }
-    void Contessa::block(Player p){
+    void Contessa::block(Player& p){
 
     }    
 }

@@ -9,9 +9,9 @@ namespace coup{
     class Duke : public Player {
         string card = "Duke";
         public:
-            Duke(Game,string);
+            Duke(Game& ,const string&);
             string role();
-            void block(Player);
+            void block(Player&);
             void tax();
     };
 }

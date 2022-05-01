@@ -16,7 +16,13 @@ namespace coup{
     string Game::winner(){
         return "S";
     }
-    void Game::add_player(string name){
-        this->players_list.push_back(name);
+    vector<string>* Game::get_list(){
+        return &this->players_list;
+    }
+    void Game::add_player(const string& name){
+        // cout << "add player\n";
+        vector<string>* v = get_list();
+        v->push_back(name);
+        // cout <<this->players_list.size()<< endl;
     }
 }

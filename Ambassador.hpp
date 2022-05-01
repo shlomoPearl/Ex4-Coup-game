@@ -9,12 +9,8 @@ class Ambassador : public Player {
 
     string card = "Ambassador";
     public:
-        Ambassador(Game, string);
-        // void income();
-        // void foreign_aid();
-        // void coup();
+        Ambassador(Game&, const string&);
         string role();
-        void transfer(Player, Player);
-        // string coins();
+        void transfer(Player&, Player&);
 };
 }

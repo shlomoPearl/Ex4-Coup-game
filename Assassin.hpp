@@ -9,11 +9,7 @@ class Assassin : public Player {
 
     string card = "Assassin";
     public:
-        Assassin(Game,string);
-        // void income();
-        // void foreign_aid();
-        // void coup();
+        Assassin(Game& ,const string&);
         string role();
-        // string coins();
 };
 }

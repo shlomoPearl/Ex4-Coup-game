@@ -10,12 +10,9 @@ class Contessa : public Player {
 
     string card = "Contessa";
     public:
-        // void income();
-        // void foreign_aid();
-        // void coup();
-        Contessa(Game, string);
+        
+        Contessa(Game&, const string&);
         string role();
-        void block(Player);
-        // string coins();
+        void block(Player&);
 };
 }

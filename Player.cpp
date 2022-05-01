@@ -5,14 +5,15 @@
 #include <stdexcept>
 #include "Player.hpp"
 
-#define FOREIGN_AID 2
+const int FOREIGN_AID = 2;
 
 using namespace std;
 
 namespace coup{
-    Player::Player(Game& game, string name){
+    Player::Player(Game& game, const string& name){
+        // cout << "players func\n";
         this->game = game;
-        this->game.add_player(name);
+        game.add_player(name);
         this->name = name;
     }
     void Player::income(){

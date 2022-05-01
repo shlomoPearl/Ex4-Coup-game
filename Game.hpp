@@ -12,10 +12,12 @@ namespace coup{
 
         public:
             Game();
+            // Game() : players_list(0){};
             string turn();
             vector<string> players();
             string winner();
-            void add_player(string);
+            vector<string>* get_list();
+            void add_player(const string&);
 
     };
 }

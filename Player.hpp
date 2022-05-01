@@ -16,7 +16,7 @@ class Player{
 
     public:
 
-        Player(Game&,string);
+        Player(Game&, const string&);
         void income();
         void foreign_aid();
         void coup(Player);

@@ -5,16 +5,16 @@
 #include <stdexcept>
 #include "Duke.hpp"
 
-#define TAX 3
+const int TAX = 3;
 using namespace std;
 
 namespace coup{
-    Duke::Duke(Game game, string name) : Player(game, name){} 
+    Duke::Duke(Game& game, const string& name) : Player(game, name){} 
     
     string Duke::role(){
         return this-> card;
     }
-    void Duke::block(Player p){
+    void Duke::block(Player& p){
 
     }
     void Duke::tax(){
