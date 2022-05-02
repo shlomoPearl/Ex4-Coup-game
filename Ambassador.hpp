@@ -9,7 +9,7 @@ class Ambassador : public Player {
 
     string card = "Ambassador";
     public:
-        Ambassador(Game&, const string&);
+        Ambassador(Game& ,const string&);
         string role();
         void transfer(Player&, Player&);
 };

@@ -9,20 +9,21 @@ namespace coup{
 class Player{
 
     int money = 0;
-    Game game;
+    Game& game;
 
     protected:
-        string name;
-
+        const string& name;
+        bool block_action = false;
     public:
 
         Player(Game&, const string&);
         void income();
         void foreign_aid();
-        void coup(Player);
+        void coup(Player&);
         virtual string role();
-        int coins();
-        int get_money();
+        int coins()const;
+        int get_money()const;
         void set_money(int);
+        void check_turn();
 };
 }

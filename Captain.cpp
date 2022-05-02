@@ -8,7 +8,7 @@ const int TAX = 3;
 using namespace std;
 
 namespace coup{
-    Captain::Captain(Game& game,const string& name) : Player(game, name){}
+    Captain::Captain(Game& game ,const string& name) : Player(game, name){}
     string Captain::role(){
         return this-> card;
     }

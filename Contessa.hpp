@@ -11,7 +11,7 @@ class Contessa : public Player {
     string card = "Contessa";
     public:
         
-        Contessa(Game&, const string&);
+        Contessa(Game& ,const string&);
         string role();
         void block(Player&);
 };

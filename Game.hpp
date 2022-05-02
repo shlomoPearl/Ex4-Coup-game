@@ -9,15 +9,14 @@ namespace coup{
     class Game{
 
         vector<string> players_list;
-
+        vector<string>* get_list();
         public:
             Game();
-            // Game() : players_list(0){};
             string turn();
+            uint current_turn = 0;
             vector<string> players();
             string winner();
-            vector<string>* get_list();
             void add_player(const string&);
-
+            void remove_player(const string&);
     };
 }

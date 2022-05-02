@@ -9,7 +9,7 @@
 using namespace std;
 
 namespace coup{
-    Assassin::Assassin(Game& game, const string& name) : Player(game, name){}
+    Assassin::Assassin(Game& game ,const string& name) : Player(game, name){}
     string Assassin::role(){
         return this-> card;
     }

@@ -9,7 +9,7 @@ class Captain : public Player {
 
     string card = "Captain";
     public:
-        Captain(Game&, const string&);
+        Captain(Game& ,const string&);
         string role();
         void steal(Player&);
         void block(const Player&);
