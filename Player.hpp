@@ -9,9 +9,10 @@ namespace coup{
 class Player{
 
     int money = 0;
-    Game& game;
+    // Game& game;
 
     protected:
+        Game& game;
         const string& name;
         bool block_action = false;
     public:
@@ -19,7 +20,7 @@ class Player{
         Player(Game&, const string&);
         void income();
         void foreign_aid();
-        void coup(Player&);
+        virtual void coup(Player&);
         virtual string role();
         int coins()const;
         int get_money()const;

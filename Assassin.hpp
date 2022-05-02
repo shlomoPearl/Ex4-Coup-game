@@ -11,5 +11,6 @@ class Assassin : public Player {
     public:
         Assassin(Game& ,const string&);
         string role();
+        void coup(Player&);
 };
 }

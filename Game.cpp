@@ -17,7 +17,7 @@ namespace coup{
         if (this->players_list.size() == 1) {
             return this->players_list.at(0);
         }
-        throw("the game isn't over");
+        throw logic_error("the game isn't over");
     }
     vector<string>* Game::get_list() {
         return &this->players_list;
