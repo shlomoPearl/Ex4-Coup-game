@@ -11,6 +11,6 @@ class Ambassador : public Player {
     public:
         Ambassador(Game& ,const string&);
         string role();
-        void transfer(Player&, Player&);
+        static void transfer(Player&, Player&);
 };
 }

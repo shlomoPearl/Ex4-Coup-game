@@ -6,6 +6,7 @@
 #include "Assassin.hpp"
 
 const int COST_OF_COUP = 3;
+const int COST_OF_COUP_ASSASSIN = 7;
 using namespace std;
 
 namespace coup{
@@ -15,11 +16,13 @@ namespace coup{
     }
     void Assassin::coup(Player& p) {
         check_turn();
-        if (this->coins() == COST_OF_COUP) {
-            this->set_money(-COST_OF_COUP);
+        this->game.current_turn++;
+        if (this->coins() >= COST_OF_COUP_ASSASSIN && this->coins() < COST_OF_COUP) {
+            this->set_money(-COST_OF_COUP_ASSASSIN);  // coup in 3 coins
             this->game.remove_player(p.name);
-            this->game.current_turn++;
+        }else if (this->coins() >= COST_OF_COUP) {
+            this->set_money(-COST_OF_COUP);  // coup in 7 like the other
+            this->game.remove_player(p.name);
         }
     }
-      
 }
