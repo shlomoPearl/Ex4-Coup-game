@@ -14,7 +14,6 @@ class Player{
     protected:
         Game& game;
         // const string& name;
-        bool block_action = false;
     public:
         const string& name;
         Player(Game&, const string&);

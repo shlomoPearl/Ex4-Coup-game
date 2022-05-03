@@ -6,6 +6,7 @@
 #include "Duke.hpp"
 
 const int TAX = 3;
+const int FOREIGN_AID = 2;
 using namespace std;
 
 namespace coup{
@@ -15,7 +16,7 @@ namespace coup{
         return this-> card;
     }
     void Duke::block(Player& p){
-
+        p.set_money(-FOREIGN_AID);
     }
     void Duke::tax(){
         set_money(TAX);
