@@ -13,7 +13,9 @@ namespace coup{
         return this-> card;
     }
     void Ambassador::transfer(Player& p1, Player& p2){
+        this->check_turn();
         p1.set_money(-1);
         p2.set_money(1);
+        this->game.next_turn();
     }    
 }

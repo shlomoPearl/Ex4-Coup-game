@@ -16,7 +16,7 @@ namespace coup{
     }
     void Assassin::coup(Player& p) {
         check_turn();
-        this->game.current_turn++;
+        this->game.next_turn();
         if (this->coins() >= COST_OF_COUP_ASSASSIN && this->coins() < COST_OF_COUP) {
             this->set_money(-COST_OF_COUP_ASSASSIN);  // coup in 3 coins
             this->game.remove_player(p.name);

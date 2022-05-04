@@ -12,19 +12,19 @@ using namespace std;
 
 namespace coup{
     Player::Player(Game& game ,const string& name) : game(game), name(name){
-        game.add_player(name);
+        game.add_player(this);
     }
     void Player::income(){
         // cout << "turn befor- "<< game.turn() <<endl;
         check_turn();
         this->money++;
-        this->game.current_turn++;
+        this->game.next_turn();
         // cout << "turn after- "<< game.turn() <<endl;
     }
     void Player::foreign_aid(){
         check_turn();
         this->money += FOREIGN_AID;
-        this->game.current_turn++;
+        this->game.next_turn(); 
     }
     void Player::coup(Player& p){
         check_turn();
@@ -32,7 +32,7 @@ namespace coup{
             this->set_money(-COST_OF_COUP);
             this->game.remove_player(p.name);
         }
-        this->game.current_turn++;
+        this->game.next_turn();
     }
     int Player::coins()const{
         return this->money;
