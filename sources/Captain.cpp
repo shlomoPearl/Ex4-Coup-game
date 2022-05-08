@@ -49,7 +49,7 @@ namespace coup{
             throw logic_error ("can block only Captain role");
         }
         Captain& c = dynamic_cast<Captain&>(p);
-        c.set_money(STOLEN_MONEY);
+        c.set_money(-STOLEN_MONEY);
         Player* stolen_men = c.get_stolen();
         stolen_men->set_money(c.stolen_money);
     }
